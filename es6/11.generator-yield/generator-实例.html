@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 带逻辑-generator
+        runner(function* () {
+            let userData = yield $.ajax({ url: 'getUserData' })
+
+            if (userData.type == 'VIP') {
+                let items = yield $.ajax({ url: 'getVIPItems' })
+            } else {
+                let items = yield $.ajax({ url: 'getItems' })
+            }
+        })
+        // yield 实例，用同步方式写异步
+        server.use(function* () {
+            let data = yield db.query(`select * from user_table`)
+            this.body = data
+        })
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

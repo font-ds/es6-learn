@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //...args ;功能；收集参数（命名随意，只能放在最后）;展开数组.
+        function show(a,b,...args){
+            console.log(a);
+            console.log(b);
+            console.log(...args);
+        }
+        show(1,2,3,4,5,6)
+
+        let arr1=[1,2,3];
+        let arr2=[4,5,6];
+        let arr3=[...arr1,...arr2];
+        console.log(arr3);
+
+        //默认参数，例如b和c，如果没有传参则取值默认值，如果传参取传的值.
+        function show2(a,b=5,c=8){
+            console.log(a,b,c);
+        }
+        show2(88);
+        show2(88,77,99)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <script>
+        //字符串新增的两个方法 ·startsWith  (判断筛选)
+        //                   ·endsWith
+        let url='http://qq.com'
+        console.log(url.startsWith('http'));
+        console.log(url.endsWith('.com'))
+
+        /*字符串模板化
+                ·使用反引号，${变量}插入
+                ·可以折行
+        */
+        let a=12
+        let str1=`asds${a}as`
+        console.log(str1);
+        
+        let title=`标题`
+        let content=`内容`
+        let str=`<div>
+            <h1>${title}</h1>
+            <p>${content}</p>
+            </div>`
+        console.log(str);
+
+        let body=document.getElementsByTagName("body")[0]
+        body.innerHTML=str
+    </script>
+</body>
+</html>

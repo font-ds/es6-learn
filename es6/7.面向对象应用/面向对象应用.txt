@@ -1,0 +1,3 @@
+·用于构建用户界面的JavaScript库
+·组件化，一个组件就是一个class
+·JSX==bable==browser.js
